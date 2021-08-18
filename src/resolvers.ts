@@ -5,6 +5,6 @@ import { userResolver } from "./types/user.type";
 
 export const resolvers: GQLResolvers = {
     User: userResolver,
-    Query: queryResolvers,
     Mutation: mutationResolvers,
+    Query: queryResolvers,
 }

@@ -1,9 +1,6 @@
-export interface User {
-    id: string;
-    name: string;
-}
+import { UserEntity, UserFriends } from "./entities/user.entity";
 
-export const users: User[] = [
+export const users: UserEntity[] = [
     {
         id: '1',
         name: 'Alan Jhonnes',
@@ -11,5 +8,12 @@ export const users: User[] = [
     {
         id: '2',
         name: 'Nathan',
+    }
+]
+
+export const friends: UserFriends[] = [
+    {
+        userId: '1',
+        friendId: '2',
     }
 ]
