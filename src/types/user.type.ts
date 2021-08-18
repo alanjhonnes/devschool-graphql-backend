@@ -10,6 +10,9 @@ export const userResolver: GQLUserResolvers = {
         return friends
             .filter(userFriend => userFriend.userId === obj.id)
             .map(userFriend => users.find(user => user.id === userFriend.friendId)!);
+    },
+    firstName: (obj) => {
+        return obj.name.split(' ')[0];
     }
 }
 

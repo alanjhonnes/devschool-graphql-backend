@@ -4,10 +4,10 @@ import { GQLMutationResolvers } from "../resolvers-types";
 
 export const addUserMutation: GQLMutationResolvers['addUser'] = (obj, args, context) => {
     const newUser: UserEntity = {
-        id: users.length.toString(),
+        id: (users.length + 1).toString(),
         name: args.data.name,
     };
     users.push(newUser);
 
-    return newUser
+    return newUser;
 }

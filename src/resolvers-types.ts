@@ -35,6 +35,7 @@ export type GQLUser = {
   readonly id: Scalars['ID'];
   readonly name: Scalars['String'];
   readonly friends: ReadonlyArray<GQLUser>;
+  readonly firstName: Scalars['String'];
 };
 
 export type GQLUserInput = {
@@ -142,6 +143,7 @@ export type GQLUserResolvers<ContextType = GraphQLContext, ParentType extends GQ
   id: Resolver<GQLResolversTypes['ID'], ParentType, ContextType>;
   name: Resolver<GQLResolversTypes['String'], ParentType, ContextType>;
   friends: Resolver<ReadonlyArray<GQLResolversTypes['User']>, ParentType, ContextType>;
+  firstName: Resolver<GQLResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 

@@ -2,4 +2,5 @@ type User {
     id: ID!
     name: String!
     friends: [User!]!
+    firstName: String!
 }

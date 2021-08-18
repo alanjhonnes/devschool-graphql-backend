@@ -15,5 +15,9 @@ export const friends: UserFriends[] = [
     {
         userId: '1',
         friendId: '2',
+    },
+    {
+        userId: '2',
+        friendId: '1',
     }
 ]
