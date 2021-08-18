@@ -1,0 +1,22 @@
+schema:
+  "./src/**/*.graphql":
+    noRequire: true
+    
+generates:
+  ./src/resolvers-types.ts:
+    plugins:
+      - typescript
+      - typescript-resolvers
+    config:
+      namingConvention:
+        typeNames: keep
+        enumValues: keep
+      immutableTypes: true
+      avoidOptionals: true
+      useIndexSignature: false
+      typesPrefix: GQL
+      # defaultMapper: Partial<{T}>
+      contextType: ./context#GraphQLContext
+      # enumValues:
+      mappers:
+        User: ./entities/user.entity#UserEntity
